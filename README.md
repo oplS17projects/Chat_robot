@@ -66,15 +66,18 @@ Upload the architecture diagram you made for your slide presentation to your rep
 Create several paragraphs of narrative to explain the pieces and how they interoperate.
 
 ## Schedule
-Explain how you will go from proposal to finished product. 
+#####Week 1: Apr 2 - Apr 9
+build a basic prototype of the user interface.  
+do research on machine learning.  
+begin implementing machine learning algorithms.  
+#####Week 2: Apr 10 - Apr 16
+create and polish the final version of the user interface.  
+continue working on implementing machine learning algorithms.  
+#####Week 3: Apr 16 - Apr 24
+finish implementing machine learning algorithms.  
+deploy the webpage to a webhost.  
+get people do user testing, and make any necessary changes.  
 
-There are three deliverable milestones to explicitly define, below.
-
-The nature of deliverables depend on your project, but may include things like processed data ready for import, core algorithms implemented, interface design prototyped, etc. 
-
-You will be expected to turn in code, documentation, and data (as appropriate) at each of these stages.
-
-Write concrete steps for your schedule to move from concept to working system. 
 
 ### First Milestone (Sun Apr 9)
 The front-end prototype will be complete.  
@@ -88,6 +91,7 @@ Implementation of machine learning algorithms ongoing.
 ### Public Presentation (Mon Apr 24, Wed Apr 26, or Fri Apr 28 [your date to be determined later])
 Implementation of machine learning algorithms will be complete.  
 Webpage is hosted on some webhost.  
+User testing is complete.
 
 ## Group Responsibilities
 Here each group member gets a section where they, as an individual, detail what they are responsible for in this project. Each group member writes their own Responsibility section. Include the milestones and final deliverable.
