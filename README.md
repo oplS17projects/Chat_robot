@@ -22,9 +22,9 @@ The idea here is to identify what ideas from the class you will use in carrying 
 **Your project will be graded, in part, by the extent to which you adopt approaches from the course into your implementation, _and_ your discussion about this.**
 
 ### External Technologies
+- Chat Robot will be hosted on a web-server, and published to the web.
 You are encouraged to develop a project that connects to external systems. For example, this includes systems that:
 
-Chat Robot will be hosted on a web-server, and published to the web.
 - retrieve information or publish data to the web
 - generate or process sound
 - control robots or other physical systems
@@ -51,7 +51,6 @@ Will it run on some data, like batch mode? Will you present some analytical resu
 Will it be interactive? Can you show it working? This project involves a live demo, so interactivity is good.
 
 ### Evaluation of Results
-
 A number of tests will need to pass to prove we are successful. An example would be if we told the robot some information about 
 ourselves, such as name, age, height, favorite foods, etc., and the robot was then able to recall that information when prompted, then
 we would know we were successful.
