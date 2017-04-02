@@ -1,7 +1,7 @@
-# Project Title Goes Here (10 words maximum)
+# Chat Robot
 
 ### Statement
-Describe your project. Why is it interesting? Why is it interesting to you personally? What do you hope to learn? 
+The goal of Chat Robot is to create a chat robot using machine learning. It will be a single page web app where users can talk to the chat robot through a front end interface, and it can learn things about them. The most interesting aspect of Chat Robot is the machine learning. Saurabh and I are personally interested in machine learning, and would like to learn more about it.
 
 ### Analysis
 Explain what approaches from class you will bring to bear on the project.
@@ -24,6 +24,7 @@ The idea here is to identify what ideas from the class you will use in carrying 
 ### External Technologies
 You are encouraged to develop a project that connects to external systems. For example, this includes systems that:
 
+Chat Robot will be hosted on a web-server, and published to the web.
 - retrieve information or publish data to the web
 - generate or process sound
 - control robots or other physical systems
@@ -82,20 +83,3 @@ What additionally will be completed before the public presentation?
 Here each group member gets a section where they, as an individual, detail what they are responsible for in this project. Each group member writes their own Responsibility section. Include the milestones and final deliverable.
 
 Please use Github properly: each individual must make the edits to this file representing their own section of work.
-
-**Additional instructions for teams of three:** 
-* Remember that you must have prior written permission to work in groups of three (specifically, an approved `FP3` team declaration submission).
-* The team must nominate a lead. This person is primarily responsible for code integration. This work may be shared, but the team lead has default responsibility.
-* The team lead has full partner implementation responsibilities also.
-* Identify who is team lead.
-
-In the headings below, replace the silly names and GitHub handles with your actual ones.
-
-### Susan Scheme @susanscheme
-will write the....
-
-### Leonard Lambda @lennylambda
-will work on...
-
-### Frank Funktions @frankiefunk 
-Frank is team lead. Additionally, Frank will work on...   
