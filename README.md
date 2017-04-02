@@ -76,17 +76,17 @@ You will be expected to turn in code, documentation, and data (as appropriate) a
 Write concrete steps for your schedule to move from concept to working system. 
 
 ### First Milestone (Sun Apr 9)
-The front-end prototype will be complete.
-research concerning machine learning will be complete.
-started to implement machine learning algorithms.
+The front-end prototype will be complete.  
+Research concerning machine learning will be complete.  
+Started to implement machine learning algorithms.  
 
 ### Second Milestone (Sun Apr 16)
-front-end will be complete
-implementation of machine learning algorithms ongoing.
+Front-end will be complete.  
+Implementation of machine learning algorithms ongoing.  
 
 ### Public Presentation (Mon Apr 24, Wed Apr 26, or Fri Apr 28 [your date to be determined later])
-implementation of machine learning algorithms will be complete.
-webpage is hosted on some webhost.
+Implementation of machine learning algorithms will be complete.  
+Webpage is hosted on some webhost.  
 
 ## Group Responsibilities
 Here each group member gets a section where they, as an individual, detail what they are responsible for in this project. Each group member writes their own Responsibility section. Include the milestones and final deliverable.
