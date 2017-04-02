@@ -94,6 +94,10 @@ Please use Github properly: each individual must make the edits to this file rep
 will work on things related to the web-server libraries, such as creating the user interface. Along with Saurabh, will do research on
 machine learning, and help implement machine learning algorithms.
 
+#### Saurabh Verma @sv-uml
+Saurabh will work on building out the backend for the bot. This includes setting up the database, helping the bot "learn" from available data and writing natural language processing algorithms for communication.
+
+
 ##### Milestone 1:
 will have a prototype of the ui working, where there is an input field and text field for viewing messages.  
 Along with Saurabh, will be researching machine learning, and beginning to implement algorithms.  
@@ -103,5 +107,3 @@ Along with Saurabh, will continue working on implementing machine learning algor
 ##### Milestone 3:
 Along with Saurabh, will finish implementing machine learning algorithms.  
 will deploy the webpage, and get users to test it, as well as make necessary changes.
-
-#### Saurabh Verma @sv-uml
