@@ -66,14 +66,14 @@ Upload the architecture diagram you made for your slide presentation to your rep
 Create several paragraphs of narrative to explain the pieces and how they interoperate.
 
 ## Schedule
-#####Week 1: Apr 2 - Apr 9
+##### Week 1: Apr 2 - Apr 9
 build a basic prototype of the user interface.  
 do research on machine learning.  
 begin implementing machine learning algorithms.  
-#####Week 2: Apr 10 - Apr 16
+##### Week 2: Apr 10 - Apr 16
 create and polish the final version of the user interface.  
 continue working on implementing machine learning algorithms.  
-#####Week 3: Apr 16 - Apr 24
+##### Week 3: Apr 16 - Apr 24
 finish implementing machine learning algorithms.  
 deploy the webpage to a webhost.  
 get people do user testing, and make any necessary changes.  
