@@ -23,6 +23,8 @@ The idea here is to identify what ideas from the class you will use in carrying 
 
 ### External Technologies
 - Chat Robot will be hosted on a web-server, and published to the web.  
+
+
 You are encouraged to develop a project that connects to external systems. For example, this includes systems that:
 
 - retrieve information or publish data to the web
