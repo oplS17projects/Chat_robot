@@ -52,9 +52,6 @@ A number of tests will need to pass to prove we are successful. An example would
 ourselves, such as name, age, height, favorite foods, etc., and the robot was then able to recall that information when prompted, then
 we would know we were successful.
 
-How will you know if you are successful? 
-If you include some kind of _quantitative analysis,_ that would be good.
-
 ## Architecture Diagram
 Upload the architecture diagram you made for your slide presentation to your repository, and include it in-line here.
 
