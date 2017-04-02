@@ -35,13 +35,11 @@ You are encouraged to develop a project that connects to external systems. For e
 If your project will do anything in this category (not only the things listed above!), include this section and discuss.
 
 ### Data Sets or other Source Materials
-If you will be working with existing data, where will you get those data from? (Dowload from a website? Access in a database? Create in a simulation you will build? ...)
+Since machine-learning is a significant part of this project, it is essential for us to "feed" the bot with data sets that it can use to make important decisions. While our plan is to create data ourselves, we will constantly be on a look-out for finding data on the web.
 
-How will you convert your data into a form usable for your project?  
+Since we are writing the data ourselves, we should not encounter an issue where our bot is not able to "understand" it. However, if we are to import existing data, we plan to write a script that will convert the data format and make it consistent with our architecture.
 
-If you are pulling data from somewhere, actually go download it and look at it before writing the proposal. Explain in some detail what your plan is for accomplishing the necessary processing.
-
-If you are using some other starting materials, explain what they are. Basically: anything you plan to use that isn't code.
+Our plan is to have two types of data set formats: 1) one for NLP (Natural Language Processing) and 2) one for knowledge (Being able to handle questions).
 
 ### Deliverable and Demonstration
 At the completion of our project, we will have an interactive single page web application. During the demo, a user will be able to talk
