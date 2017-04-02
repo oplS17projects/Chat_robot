@@ -22,7 +22,7 @@ The idea here is to identify what ideas from the class you will use in carrying 
 **Your project will be graded, in part, by the extent to which you adopt approaches from the course into your implementation, _and_ your discussion about this.**
 
 ### External Technologies
-- Chat Robot will be hosted on a web-server, and published to the web.
+- Chat Robot will be hosted on a web-server, and published to the web.  
 You are encouraged to develop a project that connects to external systems. For example, this includes systems that:
 
 - retrieve information or publish data to the web
