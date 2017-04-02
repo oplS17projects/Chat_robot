@@ -44,13 +44,8 @@ If you are pulling data from somewhere, actually go download it and look at it b
 If you are using some other starting materials, explain what they are. Basically: anything you plan to use that isn't code.
 
 ### Deliverable and Demonstration
-Explain exactly what you'll have at the end. What will it be able to do at the live demo?
-
-What exactly will you produce at the end of the project? A piece of software, yes, but what will it do? Here are some questions to think about (and answer depending on your application).
-
-Will it run on some data, like batch mode? Will you present some analytical results of the processing? How can it be re-run on different source data?
-
-Will it be interactive? Can you show it working? This project involves a live demo, so interactivity is good.
+At the completion of our project, we will have an interactive single page web application. During the demo, a user will be able to talk
+to the chat robot, and give it some information. The robot wil be able to "learn" from this information. It will be able to recall the information when prompted, as well as have altered dialogue based on user input. When prompted by the user, the robot will be able to perform simple tasks, such as search for something on the web.
 
 ### Evaluation of Results
 A number of tests will need to pass to prove we are successful. An example would be if we told the robot some information about 
