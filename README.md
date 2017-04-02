@@ -97,3 +97,9 @@ User testing is complete.
 Here each group member gets a section where they, as an individual, detail what they are responsible for in this project. Each group member writes their own Responsibility section. Include the milestones and final deliverable.
 
 Please use Github properly: each individual must make the edits to this file representing their own section of work.
+
+### Scott Mello @mello244688
+will work on things related to the web-server libraries, such as creating the user interface. Along with Saurabh, will do research on
+machine learning, and help implement machine learning algorithms.
+
+### Saurabh Verma @sv-uml
