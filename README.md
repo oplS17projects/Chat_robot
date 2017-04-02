@@ -98,8 +98,18 @@ Here each group member gets a section where they, as an individual, detail what 
 
 Please use Github properly: each individual must make the edits to this file representing their own section of work.
 
-### Scott Mello @mello244688
+#### Scott Mello @mello244688
 will work on things related to the web-server libraries, such as creating the user interface. Along with Saurabh, will do research on
 machine learning, and help implement machine learning algorithms.
 
-### Saurabh Verma @sv-uml
+##### Milestone 1:
+will have a prototype of the ui working, where there is an input field and text field for viewing messages.  
+Along with Saurabh, will be researching machine learning, and beginning to implement algorithms.  
+##### Milestone 2:
+will have the user interface completed.  
+Along with Saurabh, will continue working on implementing machine learning algorithms.  
+##### Milestone 3:
+Along with Saurabh, will finish implementing machine learning algorithms.  
+will deploy the webpage, and get users to test it, as well as make necessary changes.
+
+#### Saurabh Verma @sv-uml
