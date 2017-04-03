@@ -30,9 +30,13 @@ ourselves, such as name, age, height, favorite foods, etc., and the robot was th
 we would know we were successful.
 
 ## Architecture Diagram
-Upload the architecture diagram you made for your slide presentation to your repository, and include it in-line here.
+![Architecture](/Architecture.jpg?raw=true “Architecture”)
 
-Create several paragraphs of narrative to explain the pieces and how they interoperate.
+The main UI of this application is the chat box. In what appears to be a standard conversation window between two users, the chat box is the human interface to the machine-learning-based bot. The chatbot will appear to be a normal user who will intelligently respond to other users. The UI of this application will be created by Scott Mello (@mello244688).
+
+The backend/database will primarily be worked on by Saurabh Verma (@sv-uml). This includes setting up a SQL-based database that stores datasets for the bot and also manages connections for the chat. Using Sockets allows users to chat with each other, including the bot. This object will be a part of the backend. The main components of this area are `web-server` and `db` libraries.
+
+The heart of this project is the Bot and how it uses artificial intelligence to communicate with users. The data-sets and architecture will be worked on by both Saurabh Verma (@sv-uml) and Scott Mello (@mello244688). While this area is a part of the backend, we plan to prioritize it over other aspects of the backend.
 
 ## Schedule
 ##### Week 1: Apr 2 - Apr 9
