@@ -4,26 +4,14 @@
 The goal of Chat Robot is to create a chat robot using machine learning. It will be a single page web app where users can talk to the chat robot through a front end interface, and it can learn things about them. The most interesting aspect of Chat Robot is the machine learning. Saurabh and I are personally interested in machine learning, and would like to learn more about it.
 
 ### Analysis
-Explain what approaches from class you will bring to bear on the project.
-
-Be explicit about the techiques from the class that you will use. For example:
-
-- Will you use data abstraction? How?
-- Will you use recursion? How?
-- Will you use map/filter/reduce? How? 
-- Will you use object-orientation? How?
-- Will you use functional approaches to processing your data? How?
-- Will you use state-modification approaches? How? (If so, this should be encapsulated within objects. `set!` pretty much should only exist inside an object.)
-- Will you build an expression evaluator, like we did in the symbolic differentatior and the metacircular evaluator?
-- Will you use lazy evaluation approaches?
-
-The idea here is to identify what ideas from the class you will use in carrying out your project. 
-
-**Your project will be graded, in part, by the extent to which you adopt approaches from the course into your implementation, _and_ your discussion about this.**
+- data abstraction will be used, as it is good practice.
+- recursion will be necessary. we will need to loop through data, and select or alter it.
+- object-orientation will be necessary for storing the information for the bot.
+- there is a strong chance that other ideas from class will be used once the machine learning algorithms begin being implemented.
 
 ### External Technologies
 - Chat Robot will be hosted on a web-server, and published to the web.  
-
+- We will attempt to retrieve data from the web to feed the bot with.
 
 You are encouraged to develop a project that connects to external systems. For example, this includes systems that:
 
