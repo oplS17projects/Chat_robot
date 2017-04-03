@@ -13,15 +13,6 @@ The goal of Chat Robot is to create a chat robot using machine learning. It will
 - Chat Robot will be hosted on a web-server, and published to the web.  
 - We will attempt to retrieve data from the web to feed the bot with.
 
-You are encouraged to develop a project that connects to external systems. For example, this includes systems that:
-
-- retrieve information or publish data to the web
-- generate or process sound
-- control robots or other physical systems
-- interact with databases
-
-If your project will do anything in this category (not only the things listed above!), include this section and discuss.
-
 ### Data Sets or other Source Materials
 Since machine-learning is a significant part of this project, it is essential for us to "feed" the bot with data sets that it can use to make important decisions. While our plan is to create data ourselves, we will constantly be on a look-out for finding data on the web.
 
