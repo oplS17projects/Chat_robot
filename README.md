@@ -30,7 +30,7 @@ ourselves, such as name, age, height, favorite foods, etc., and the robot was th
 we would know we were successful.
 
 ## Architecture Diagram
-![Architecture](/Architecture.jpg?raw=true “Architecture”)
+![Architecture](/Architecture.jpg?raw=true "Architecture")
 
 The main UI of this application is the chat box. In what appears to be a standard conversation window between two users, the chat box is the human interface to the machine-learning-based bot. The chatbot will appear to be a normal user who will intelligently respond to other users. The UI of this application will be created by Scott Mello (@mello244688).
 
