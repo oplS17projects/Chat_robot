@@ -19,7 +19,8 @@
                        (href "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css")
                        (type "text/css")))
                 (link ((rel "stylesheet")
-                       (href ,( asset-url "css/chat_robot.css"))
+                       ;(href ,( asset-url "css/chat_robot.css"))
+                       (href "https://github.com/oplS17projects/Chat_robot/blob/websocketChat/public/assets/css/chat_robot.css")
                        (type "text/css"))))
           (body (div ((class "jumbotron text-center"))
                      (h1 "Chat Robot")
@@ -40,7 +41,8 @@
                                                     (type "submit")) "Send"))))))
                 (script ((src "https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js")))
                 (script ((src "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js")))
-                (script ((src ,(asset-url "js/chatRobot.js"))))))))
+                (script ((src "https://github.com/oplS17projects/Chat_robot/blob/websocketChat/public/assets/js/chatRobot.js")))))))
+                ;(script ((src ,(asset-url "js/chatRobot.js"))))))))
 
 
 (serve/servlet chat-robot-form
