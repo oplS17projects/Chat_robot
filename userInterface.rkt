@@ -5,6 +5,10 @@
 
 (define root (current-directory))
 
+(define port (if (getenv "PORT")
+                 (string->number (getenv "PORT"))
+                 8080))
+
 (define (chat-robot-form req)
   (response/xexpr
    `(html (head (title "Chat Robot")
@@ -36,6 +40,10 @@
                 (script ((src "/chatRobot.js")))))))
 
 (serve/servlet chat-robot-form
+                 #:servlet-path "/"
+                 #:port port
+                 #:listen-ip #f
+                 #:command-line? #t
                  #:extra-files-paths
                  (list
                   (build-path root "css")
