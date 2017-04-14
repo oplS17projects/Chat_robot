@@ -16,7 +16,7 @@
                        (href "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css")
                        (type "text/css")))
                 (link ((rel "stylesheet")
-                       (href "css/chat_robot.css")
+                       (href "chat_robot.css")
                        (type "text/css")))
                 (script ((src "https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js")))
                 (script ((src "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"))))
@@ -37,13 +37,13 @@
                                            (button ((class "btn btn-primary")
                                                     (id "submitButton")
                                                     (type "submit")) "Send"))))))
-                (script ((src "js/chatRobot.js")))))))
+                (script ((src "chatRobot.js")))))))
 
 (serve/servlet chat-robot-form
                  #:servlet-path "/"
                  #:port port
-                 #:listen-ip #f
-                 #:command-line? #t
+                 ;#:listen-ip #f
+                 ;#:command-line? #t
                  #:extra-files-paths
                  (list
                   (build-path root "css")
