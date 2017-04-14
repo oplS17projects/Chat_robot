@@ -42,8 +42,8 @@
 (serve/servlet chat-robot-form
                  #:servlet-path "/"
                  #:port port
-                 ;#:listen-ip #f
-                 ;#:command-line? #t
+                 #:listen-ip #f
+                 #:command-line? #t
                  #:extra-files-paths
                  (list
                   (build-path root "css")
