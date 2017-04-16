@@ -1,24 +1,25 @@
 #lang racket/base
-;; Demonstrates the ws-serve interface.
-;; Public Domain.
 
 (module+ main
   (require net/rfc6455)
 
+  (define count 0)
+  (define connects '())
+
+  (define (ws-send-all connection-list m)
+    (for-each (lambda (c) (ws-send! c m)) connects))
+  
   (define (connection-handler c state)
-    (define connects '())
-    (define count 0)
     (cond
-      [(not(memq c connects )) (begin (set! connects (cons c connects)) (set! count (add1 count)) (print count))])
+      [(not(memq c connects )) (begin (set! connects (cons c connects)) (set! count (add1 count)))])
     (let loop ()
       (sync (handle-evt c
                         (lambda _
                           (define m (ws-recv c #:payload-type 'text))
                           (unless (eof-object? m)
                             (cond
-                              [(equal? m "goodbye") (ws-send! c "Goodbye!")]
                               [(equal? m "") (loop)]
-                              [else (begin (ws-send! c m)
+                              [else (begin (ws-send-all c m)
                                            (loop))]))))))
     (ws-close! c))
 
