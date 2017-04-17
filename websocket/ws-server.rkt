@@ -7,7 +7,16 @@
   (define connects '())
 
   (define (ws-send-all connection-list m)
-    (for-each (lambda (c) (ws-send! c m)) connects))
+    (for-each (lambda (c) (ws-send! c m)) connection-list))
+
+  (define (remove-closed-conns)
+    (when (ormap ws-conn-closed? connects)
+      (let ((updated-conn-list (filter (lambda (c) (not (ws-conn-closed? c))) connects)))
+        (set! count (- (length connects) (length updated-conn-list)))
+        (set! connects updated-conn-list))))
+
+  (define (close-all connection-list)
+    (for-each (lambda (c) (ws-close! c)) connection-list))
   
   (define (connection-handler c state)
     (cond
@@ -19,9 +28,10 @@
                           (unless (eof-object? m)
                             (cond
                               [(equal? m "") (loop)]
-                              [else (begin (ws-send-all c m)
+                              [else (begin (ws-send-all connects m)
                                            (loop))]))))))
-    (ws-close! c))
+    (ws-close! c)
+    (remove-closed-conns))
 
   (define stop-service
     (ws-serve #:port 8081 connection-handler))
