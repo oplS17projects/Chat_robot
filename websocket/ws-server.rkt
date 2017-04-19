@@ -2,21 +2,30 @@
 
 (module+ main
   (require net/rfc6455)
+  (require json)
 
+  ;; number of connected clients
   (define count 0)
+
+  ;; list of all client connections
   (define connects '())
 
+  ;; sends message to every client on the connection list
   (define (ws-send-all connection-list m)
     (for-each (lambda (c) (ws-send! c m)) connection-list))
 
+  ;; removes closed connections from the connection list
   (define (remove-closed-conns)
     (when (ormap ws-conn-closed? connects)
       (let ((updated-conn-list (filter (lambda (c) (not (ws-conn-closed? c))) connects)))
         (set! count (- (length connects) (length updated-conn-list)))
         (set! connects updated-conn-list))))
 
+  ;; closes all connections on the connection list
   (define (close-all connection-list)
     (for-each (lambda (c) (ws-close! c)) connection-list))
+
+  ;;(define (get-message))
   
   (define (connection-handler c state)
     (cond
