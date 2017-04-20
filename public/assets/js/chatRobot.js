@@ -1,13 +1,23 @@
 window.onload = function () {
-    // var sock = new WebSocket("ws://localhost:8081/test", "subprotocol");
-    var sock = new WebSocket("ws://localhost:8081/test");
+
+    var sock = new WebSocket("ws://localhost:8081/chat");
 
     sock.onopen = function() {
         console.log('open', arguments);
     };
+    
     sock.onmessage = function(e) {
         var msgObj = JSON.parse(e.data);
-        $('#chatBox').append("<b>" + msgObj.username + ": </b>" + EscapeHtml(msgObj.msg) + "<br>");
+        
+        if (typeof msgObj == "object") {
+            $('#chatBox').append("<b>" + EscapeHtml(msgObj.username) + ": </b>" + EscapeHtml(msgObj.msg) + "<br>");
+        }
+        else {
+            console.log("count = " + e.data);
+            $('#clients').empty();
+            $('#clients').append('<b>Active Clients: </b>' + e.data);
+        }
+        
     };
     
     sock.onclose = function() {
@@ -27,7 +37,11 @@ window.onload = function () {
         else {
             e.preventDefault();
         }
-    }); 
+    });
+    
+    window.onbeforeunload = function() {
+        sock.send("close");
+    };
 };
 
 function EscapeHtml(s) {
