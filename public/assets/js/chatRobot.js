@@ -11,6 +11,7 @@ window.onload = function () {
         
         if (typeof msgObj == "object") {
             $('#chatBox').append("<b>" + EscapeHtml(msgObj.username) + ": </b>" + EscapeHtml(msgObj.msg) + "<br>");
+            AutoScroll();
         }
         else {
             console.log("count = " + e.data);
@@ -43,6 +44,11 @@ window.onload = function () {
         sock.send("close");
     };
 };
+
+function AutoScroll() {
+    var chat = $('#chatBox');
+    chat.scrollTop(chat[0].scrollHeight);
+}
 
 function EscapeHtml(s) {
     return s.replace(/&/g, '&amp;')
