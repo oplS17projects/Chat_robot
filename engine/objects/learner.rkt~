@@ -1,0 +1,17 @@
+#lang racket
+
+(provide learner)
+
+(define learner
+  (class object%
+    (field (output "intent")
+           (greet (list "hello" "hi" "hey" "yo"))
+           (leave (list "bye" "goodbye" "peace" "later")))
+    (define/public (parse t)
+      (begin
+        (define lt (string-downcase t))
+        (cond ((member lt greet) "greet")
+              ((member lt leave) "goodbye")
+              (else "None"))))
+    (super-new)))
+
