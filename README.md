@@ -26,7 +26,17 @@ to the chat robot, and give it some information. The robot wil be able to "learn
 Multiple clients can chat in the user interface, as well as interact with the bot, therefore we were successful.
 
 ## Architecture Diagram
-![Architecture](/Architecture.jpg?raw=true "Architecture")
+![Architecture](/Architecture_Update.jpg?raw=true "Architecture")
+
+As we developed the application, we modified our base architecture several times. The diagram above reflects how are bot is currently powered.
+
+There are multiple servers running:
+1. Web Application (UI)
+2. Socket
+3. Local REST API
+4. External Natural Language processor
+
+Assuming the 4 servers above are running, everything starts at the "Chat UI" and its Socket, where the user converses with the bot. For example, the user may write: "How are you?". The UI calls a local REST API with the parameters "how are you?". The API communicates with the NLU server, which converts the text into structured data (based on existing datasets), with an "intent" and "confidence" score. The NLU server returns this information to the local API, which then runs a parser to map the "intent" with a "learned" response. The local API finally returns the response to the Chat UI, which uses a socket to display that information in the chat window (under a user named "Bot").
 
 The main UI of this application is the chat box. In what appears to be a standard conversation window between two users, the chat box is the human interface to the machine-learning-based bot. The chatbot appears to be a normal user who intelligently responds to other users. The UI of this application was be created by Scott Mello (@mello244688).
 
