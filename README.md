@@ -57,10 +57,11 @@ Started to implement machine learning algorithms.
 Front-end is complete.  
 Implementation of machine learning algorithms ongoing.  
 
-### Public Presentation (Mon Apr 24, Wed Apr 26, or Fri Apr 28 [your date to be determined later])
+### Public Presentation (Fri Apr 28)
 Implementation of machine learning algorithms are complete.  
 Multi client chat is supported with websockets.  
 User testing is complete.
+Learning capabilities of the bot are very simple. AS a result, advanced conversations cannot be held with the bot yet.
 
 ## Group Contributions
 
