@@ -10,11 +10,13 @@ The goal of Chat Robot is to create a chat robot using machine learning. It is a
 
 
 ### Data Sets or other Source Materials
-Since machine-learning is a significant part of this project, it is essential for us to "feed" the bot with data sets that it can use to make important decisions. While our plan is to create data ourselves, we will constantly be on a look-out for finding data on the web.
+Since machine-learning is a significant part of this project, it is essential for us to "feed" the bot with data sets that it can use to make important decisions. We initially considered looking for data sets on the web. However, we decided to create data ourselves, as it was simpler and quicker.
 
-Since we are writing the data ourselves, we should not encounter an issue where our bot is not able to "understand" it. However, if we are to import existing data, we plan to write a script that will convert the data format and make it consistent with our architecture.
+Since we are wrote the data ourselves, we did not encounter an issue where our bot was unable to "understand" it.
 
-Our plan is to have two types of data set formats: 1) one for NLP (Natural Language Processing) and 2) one for knowledge (Being able to handle questions).
+We initally planned to have two types of data set formats: 1) one for NLP (Natural Language Processing) and 2) one for knowledge (Being able to handle questions). Due to time constraints, we were only able to produce "knowledge"-based data.
+
+We used RASA NLU, an open-source Python-based library for handling Natural Language processing.
 
 ### Deliverable and Demonstration
 We have an interactive single page web chat application that has a built in bot. During the demo, a can talk
@@ -26,11 +28,11 @@ Multiple clients can chat in the user interface, as well as interact with the bo
 ## Architecture Diagram
 ![Architecture](/Architecture.jpg?raw=true "Architecture")
 
-The main UI of this application is the chat box. In what appears to be a standard conversation window between two users, the chat box is the human interface to the machine-learning-based bot. The chatbot will appear to be a normal user who will intelligently respond to other users. The UI of this application will be created by Scott Mello (@mello244688).
+The main UI of this application is the chat box. In what appears to be a standard conversation window between two users, the chat box is the human interface to the machine-learning-based bot. The chatbot appears to be a normal user who intelligently responds to other users. The UI of this application was be created by Scott Mello (@mello244688).
 
-The backend/database will primarily be worked on by Saurabh Verma (@sv-uml). This includes setting up a SQL-based database that stores datasets for the bot and also manages connections for the chat. Using Sockets allows users to chat with each other, including the bot. This object will be a part of the backend. The main components of this area are `web-server` and `db` libraries.
+The backend/database was primarily worked on by Saurabh Verma (@sv-uml). This includes setting up a SQL-based database that stores datasets for the bot and also manages connections for the chat. Using Sockets allows users to chat with each other, including the bot. This object is a part of the backend. The main components of this area are `web-server` and `db` libraries.
 
-The heart of this project is the Bot and how it uses artificial intelligence to communicate with users. The data-sets and architecture will be worked on by both Saurabh Verma (@sv-uml) and Scott Mello (@mello244688). While this area is a part of the backend, we plan to prioritize it over other aspects of the backend.
+The heart of this project is the Bot and how it uses artificial intelligence to communicate with users.
 
 ## Schedule
 ##### Week 1: Apr 2 - Apr 9
@@ -66,7 +68,7 @@ User testing is complete.
 Built the front end interface, as well as the multi client chat using web sockets.
 
 #### Saurabh Verma @sv-uml
-Saurabh will work on building out the backend for the bot. This includes setting up the database, helping the bot "learn" from available data and writing natural language processing algorithms for communication.
+Saurabh worked on building out the backend for the bot. This included setting up the database, helping the bot "learn" from available data and writing natural language processing algorithms for communication.
 
 
 
