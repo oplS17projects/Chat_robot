@@ -8,7 +8,7 @@
     (close-input-port input)
     response))
 
-(urlopen "http://localhost:8081/parse?q=hello")
+;;(urlopen "http://localhost:8081/parse?q=hello")
 
 (module+ main
   (require net/rfc6455)
