@@ -1,6 +1,6 @@
 window.onload = function () {
 
-    var sock = new WebSocket("ws://localhost:8081/chat");
+    var sock = new WebSocket("ws://localhost:3000/chat");
 
     sock.onopen = function() {
         console.log('open', arguments);
