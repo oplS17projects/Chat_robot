@@ -1,5 +1,0 @@
-{"entities": [], "intent": {"confidence": 1.0, "name": "None"}, "text": "rain"}
-{"entities": [], "intent": {"confidence": 1.0, "name": "None"}, "text": "how"}
-{"entities": [], "intent": {"confidence": 1.0, "name": "None"}, "text": "howdy"}
-{"entities": [], "intent": {"confidence": 1.0, "name": "None"}, "text": "howdy"}
-{"entities": [], "intent": {"confidence": 1.0, "name": "greet"}, "text": "hi"}
