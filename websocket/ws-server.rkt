@@ -1,8 +1,11 @@
-#lang racket/base
+#lang racket
 
 (module+ main
   (require net/rfc6455)
   (require json)
+
+  ;; name of bot
+  (define bot-name "@CHAT-BOT")
 
   ;; list of all client connections
   (define connects '())
@@ -30,6 +33,19 @@
   (define (get-conn-count c-list)
     (number->string (length c-list)))
 
+  ;; checks if its a message for the bot
+  (define (msg-for-bot? m)
+    (let ((msg (get-message m)))
+      (or (string-prefix? (string-upcase msg) bot-name) (string-prefix? (string-downcase msg) bot-name))))
+
+  ;; make json for bot
+  (define (make-bot-msg m)
+    (string-append "{\"msg\":\"" m "\",\"username\":\"" (substring bot-name 1) "\"}"))
+
+  ;; parses the message from the client to the bot and removes the bot name
+  (define (get-msg-to-bot m)
+    (string-trim (substring (get-message m) (string-length bot-name))))
+
   ;; connection handler
   (define (connection-handler c state)
     (cond
@@ -41,6 +57,12 @@
                           (define m (ws-recv c #:payload-type 'text))
                           (unless (eof-object? m)
                             (cond
+                              [(msg-for-bot? m)
+                               (if (equal? (get-msg-to-bot m) "")
+                                   (loop)
+                                   (begin (ws-send-all connects m)
+                                          (ws-send-all connects (make-bot-msg "i am bot"))
+                                          (loop)))]
                               [(equal? m "close") (begin (ws-close! c)
                                                          (remove-closed-conns)
                                                          (ws-send-all connects (get-conn-count connects)))]
