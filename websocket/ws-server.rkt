@@ -1,8 +1,19 @@
 #lang racket
+(require net/url)
+
+;; code from Óscar López stackoverflow
+(define (urlopen url)
+  (let* ((input (get-pure-port (string->url url) #:redirections 5))
+         (response (port->string input)))
+    (close-input-port input)
+    response))
+
+(urlopen "http://localhost:8081/parse?q=hello")
 
 (module+ main
   (require net/rfc6455)
   (require json)
+  (require request)
 
   ;; name of bot
   (define bot-name "@CHAT-BOT")
@@ -57,15 +68,15 @@
                           (define m (ws-recv c #:payload-type 'text))
                           (unless (eof-object? m)
                             (cond
+                              [(equal? m "close") (begin (ws-close! c)
+                                                         (remove-closed-conns)
+                                                         (ws-send-all connects (get-conn-count connects)))]
                               [(msg-for-bot? m)
                                (if (equal? (get-msg-to-bot m) "")
                                    (loop)
                                    (begin (ws-send-all connects m)
                                           (ws-send-all connects (make-bot-msg "i am bot"))
                                           (loop)))]
-                              [(equal? m "close") (begin (ws-close! c)
-                                                         (remove-closed-conns)
-                                                         (ws-send-all connects (get-conn-count connects)))]
                               [(equal? (get-message m) "") (loop)]
                               [else (begin (ws-send-all connects m)
                                            (loop))]))))))
