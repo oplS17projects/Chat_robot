@@ -1,19 +1,10 @@
 #lang racket
-(require net/url)
-
-;; code from Óscar López stackoverflow
-(define (urlopen url)
-  (let* ((input (get-pure-port (string->url url) #:redirections 5))
-         (response (port->string input)))
-    (close-input-port input)
-    response))
-
-;;(urlopen "http://localhost:8081/parse?q=hello")
 
 (module+ main
   (require net/rfc6455)
   (require json)
   (require request)
+  (require net/url)
 
   ;; name of bot
   (define bot-name "@CHAT-BOT")
@@ -57,6 +48,17 @@
   (define (get-msg-to-bot m)
     (string-trim (substring (get-message m) (string-length bot-name))))
 
+  ;; code from Óscar López stackoverflow
+(define (urlopen url)
+  (let* ((input (get-pure-port (string->url url) #:redirections 5))
+         (response (port->string input)))
+    (close-input-port input)
+    response))
+
+  ;;creates the http request uri for the bot
+  (define (make-http-req m)
+    (string-append "http://localhost:8081/parse?q=" (string-replace (get-message m) " " "+")))
+  
   ;; connection handler
   (define (connection-handler c state)
     (cond
@@ -75,7 +77,7 @@
                                (if (equal? (get-msg-to-bot m) "")
                                    (loop)
                                    (begin (ws-send-all connects m)
-                                          (ws-send-all connects (make-bot-msg "i am bot"))
+                                          (ws-send-all connects (make-bot-msg (urlopen (make-http-req m))))
                                           (loop)))]
                               [(equal? (get-message m) "") (loop)]
                               [else (begin (ws-send-all connects m)
