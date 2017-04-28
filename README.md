@@ -1,17 +1,13 @@
 # Chat Robot
 
 ### Statement
-The goal of Chat Robot is to create a chat robot using machine learning. It will be a single page web app where users can talk to the chat robot through a front end interface, and it can learn things about them. The most interesting aspect of Chat Robot is the machine learning. Saurabh and I are personally interested in machine learning, and would like to learn more about it.
+The goal of Chat Robot is to create a chat robot using machine learning. It is a single page web app where users can talk to the chat robot through a front end interface, and it can learn things about them. The most interesting aspect of Chat Robot is the machine learning. Saurabh and I are personally interested in machine learning, and would like to learn more about it.
 
 ### Analysis
-- data abstraction will be used, as it is good practice.
-- recursion will be necessary. we will need to loop through data, and select or alter it.
-- object-orientation will be necessary for storing the information for the bot.
-- there is a strong chance that other ideas from class will be used once the machine learning algorithms begin being implemented.
+- recursion was necessary. we needed to loop through data, and select or alter it.
+- object-orientation was used for the machine learning aspect
+- higher order functions were used such as map, and filter.
 
-### External Technologies
-- Chat Robot will be hosted on a web-server, and published to the web.  
-- We will attempt to retrieve data from the web to feed the bot with.
 
 ### Data Sets or other Source Materials
 Since machine-learning is a significant part of this project, it is essential for us to "feed" the bot with data sets that it can use to make important decisions. While our plan is to create data ourselves, we will constantly be on a look-out for finding data on the web.
@@ -21,13 +17,11 @@ Since we are writing the data ourselves, we should not encounter an issue where 
 Our plan is to have two types of data set formats: 1) one for NLP (Natural Language Processing) and 2) one for knowledge (Being able to handle questions).
 
 ### Deliverable and Demonstration
-At the completion of our project, we will have an interactive single page web application. During the demo, a user will be able to talk
-to the chat robot, and give it some information. The robot wil be able to "learn" from this information. It will be able to recall the information when prompted, as well as have altered dialogue based on user input. When prompted by the user, the robot will be able to perform simple tasks, such as search for something on the web.
+We have an interactive single page web chat application that has a built in bot. During the demo, a can talk
+to the chat robot, and give it some information. The robot wil be able to "learn" from this information. It can recall the information when prompted, as well as have altered dialogue based on user input.
 
 ### Evaluation of Results
-A number of tests will need to pass to prove we are successful. An example would be if we told the robot some information about 
-ourselves, such as name, age, height, favorite foods, etc., and the robot was then able to recall that information when prompted, then
-we would know we were successful.
+Multiple clients can chat in the user interface, as well as interact with the bot, therefore we were successful.
 
 ## Architecture Diagram
 ![Architecture](/Architecture.jpg?raw=true "Architecture")
@@ -54,37 +48,25 @@ get people do user testing, and make any necessary changes.
 
 ### First Milestone (Sun Apr 9)
 The front-end prototype will be complete.  
-Research concerning machine learning will be complete.  
+Research concerning machine learning ongoing.  
 Started to implement machine learning algorithms.  
 
 ### Second Milestone (Sun Apr 16)
-Front-end will be complete.  
+Front-end is complete.  
 Implementation of machine learning algorithms ongoing.  
 
 ### Public Presentation (Mon Apr 24, Wed Apr 26, or Fri Apr 28 [your date to be determined later])
-Implementation of machine learning algorithms will be complete.  
-Webpage is hosted on some webhost.  
+Implementation of machine learning algorithms are complete.  
+Multi client chat is supported with websockets.  
 User testing is complete.
 
-## Group Responsibilities
-Here each group member gets a section where they, as an individual, detail what they are responsible for in this project. Each group member writes their own Responsibility section. Include the milestones and final deliverable.
-
-Please use Github properly: each individual must make the edits to this file representing their own section of work.
+## Group Contributions
 
 #### Scott Mello @mello244688
-will work on things related to the web-server libraries, such as creating the user interface. Along with Saurabh, will do research on
-machine learning, and help implement machine learning algorithms.
+Built the front end interface, as well as the multi client chat using web sockets.
 
 #### Saurabh Verma @sv-uml
 Saurabh will work on building out the backend for the bot. This includes setting up the database, helping the bot "learn" from available data and writing natural language processing algorithms for communication.
 
 
-##### Milestone 1:
-will have a prototype of the ui working, where there is an input field and text field for viewing messages.  
-Along with Saurabh, will be researching machine learning, and beginning to implement algorithms.  
-##### Milestone 2:
-will have the user interface completed.  
-Along with Saurabh, will continue working on implementing machine learning algorithms.  
-##### Milestone 3:
-Along with Saurabh, will finish implementing machine learning algorithms.  
-will deploy the webpage, and get users to test it, as well as make necessary changes.
+
