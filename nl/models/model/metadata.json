@@ -10,7 +10,7 @@
     "intent_classifier": "intent_classifier.pkl", 
     "entity_extractor": null, 
     "language": "en", 
-    "trained_at": "20170428-003222", 
+    "trained_at": "20170428-024313", 
     "training_data": "training_data.json", 
     "rasa_nlu_version": "0.8.0a6"
 }

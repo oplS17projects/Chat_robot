@@ -76,6 +76,17 @@ def create_app(config):
     def status():
         return jsonify(current_app.data_router.get_status())
 
+    @rasa_nlu_app.route("/reset", methods=['GET'])
+    def reset():
+        app = WSGIServer(('0.0.0.0', rasa_nlu_config['port']), create_app(rasa_nlu_config))
+        app.stop()
+        return "Stopped"
+
+    @rasa_nlu_app.route("/relation", methods=['GET'])
+    def response():
+        json_data = open(os.path.join(os.path.realpath(os.path.dirname(__file__)), "relation.json"), "r")
+        return json_data;
+
     @rasa_nlu_app.route("/", methods=['GET'])
     @requires_auth
     def hello():

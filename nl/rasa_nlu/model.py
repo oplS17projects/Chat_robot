@@ -188,8 +188,6 @@ class Trainer(object):
             "pipeline": [component.name for component in self.pipeline],
         }
 
-        call(["sudo", "rm", "models/model"])
-
         if create_unique_subfolder:
             dir_name = os.path.join(path, "model")
             if not os.path.exists(dir_name):
