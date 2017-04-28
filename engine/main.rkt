@@ -43,7 +43,8 @@
                 "kw args may not include #:servlet-regexp or #:command-line?")]
         [else
          (let* ([kw-pairs (append '((#:servlet-regexp #rx"")
-                                    (#:command-line? #t))
+                                    (#:command-line? #t)
+                                    (#:port 8081))
                                   (filter (lambda (kw-pair)
                                             (not (eq? '#:response-maker (car kw-pair))))
                                           (map list kws kw-args)))]
