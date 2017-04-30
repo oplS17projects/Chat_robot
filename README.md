@@ -17,7 +17,7 @@ Since we are wrote the data ourselves, we did not encounter an issue where our b
 
 We initally planned to have two types of data set formats: 1) one for NLP (Natural Language Processing) and 2) one for knowledge (Being able to handle questions). Due to time constraints, we were only able to produce "knowledge"-based data.
 
-Up until Demo Day, our project heavily depended on RASA NLU, an open-source Python-based library for handling Natural Language processing. However, since then, we have removed Python from the project and rewritten parsing and intent-management code in Racket.
+Up until Demo Day, our project heavily depended on RASA NLU, an open-source Python-based library for handling Natural Language processing. However, since then, we have removed Python from the project and have rewritten the parsing and intent-management code in Racket.
 
 ### Deliverable and Demonstration
 We have an interactive single page web chat application that has a built in bot. During the demo, one can talk
