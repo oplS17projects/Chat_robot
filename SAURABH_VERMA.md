@@ -130,6 +130,6 @@ Once the list was sorted, I used the `cdar` (`(cdar (car k))`) accessor to get t
 
 returns `((8 . "howdy") . "greet")`
 
-Next, `(cdr ((8 . "howdy") . "greet")) returns `"greet"`.
+Next, `(cdr ((8 . "howdy") . "greet"))` returns `"greet"`.
 
 Once the `intent` is retrieved, it is passed to the `parser` object's `parse_intent` function and the resulting response string is returned to the API caller.
