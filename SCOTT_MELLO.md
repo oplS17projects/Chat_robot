@@ -3,7 +3,7 @@
 ## Scott Mello
 ### April 30, 2017
 
-#Overview
+# Overview
 This code is for the WebSocket server of the chat robot. 
 
 A WebSocket provides full-duplex communication over a TCP connection. 
