@@ -127,6 +127,7 @@ One problem I encountered in this file was referencing static files in the webse
 Another important topic that we learned during the semester was list manipulation and the use of pair accessors to retrieve list elements. In `routes.rkt` (Line 42), once a 3D array/list was created using the Levenshtein algorithm and the `find` function, the next task was to find the pair with the lowest Levenshtein score (lower = more similar in this case).
 
 I called `sort` on the 3D array/list and used the `#:key` parameter to sort using the `caar` accessor on every element. Calling `caar` on every element (`((12 . "hi") . "greet")`) returned the Levenshtein score (`12` in this example). Once I retrieved that data, I provided it the "less-than" operator (`<`) to sort the entire list ascendingly.
+
 **Observation**: This operation worked very similar to the `filter` higher-order function, but provided more flexibility.
 
 Once the list was sorted, I used the `cdar` (`(cdr (car k))`) accessor to get the `intent` from the first pair (with the lowest Levenshtein score):
