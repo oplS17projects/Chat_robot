@@ -1,4 +1,4 @@
-#WebSockets for Chat Robot
+# WebSockets for Chat Robot
 
 ## Scott Mello
 ### April 30, 2017
@@ -19,7 +19,7 @@ the recursive loop.
 
 **Authorship note:** All of the code described here was written by myself.
 
-#Libraries Used
+# Libraries Used
 
 This code uses 3 libraries:
 
@@ -31,7 +31,7 @@ This code uses 3 libraries:
 * The ```json``` library is used to parse json messages sent from the client.
 * The ```net/url``` library is used to make RESTful web requests to the python machine learning server.
 
-#Key Code Excerpts
+# Key Code Excerpts
 
 The following represents the code I wrote for this project that displays the core concepts taught in this course.
 
