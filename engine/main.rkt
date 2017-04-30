@@ -21,6 +21,7 @@
 (define (put path handler) (define-handler "PUT" path handler))
 (define (patch path handler) (define-handler "PATCH" path handler))
 (define (delete path handler) (define-handler "DELETE" path handler))
+(define curr_dir current-directory)
 
 (define (default-response-maker status headers body)
   (response/full status
@@ -44,7 +45,10 @@
         [else
          (let* ([kw-pairs (append '((#:servlet-regexp #rx"")
                                     (#:command-line? #t)
-                                    (#:port 8081))
+                                    (#:port 8081)
+                                    (#:extra-files-paths
+                                     (list (build-path (current-directory) "intent_map.json")))
+                                    (#:server-root-path (current-directory)))
                                   (filter (lambda (kw-pair)
                                             (not (eq? '#:response-maker (car kw-pair))))
                                           (map list kws kw-args)))]

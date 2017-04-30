@@ -1,0 +1,12 @@
+[
+    {"text": "hey","intent": "greet"},
+    {"text": "howdy","intent": "greet"},
+    {"text": "hey there","intent": "greet"},
+    {"text": "hello","intent": "greet"},
+    {"text": "hi","intent": "greet"},
+    {"text": "yes","intent": "affirm"},
+    {"text": "yep","intent": "affirm"},
+    {"text": "yeah","intent": "affirm"},
+    {"text": "bye","intent": "goodbye"},
+    {"text": "goodbye","intent": "goodbye"}
+]
