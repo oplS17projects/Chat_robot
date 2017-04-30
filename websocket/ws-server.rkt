@@ -3,7 +3,6 @@
 (module+ main
   (require net/rfc6455)
   (require json)
-  (require request)
   (require net/url)
 
   ;; name of bot
@@ -14,13 +13,24 @@
 
   ;; sends message to every client on the connection list
   (define (ws-send-all connection-list m)
-    (for-each (lambda (c) (ws-send! c m)) connection-list))
+    (map (lambda (c) (ws-send! c m)) connection-list))
 
   ;; removes closed connections from the connection list
   (define (remove-closed-conns)
     (when (ormap ws-conn-closed? connects)
-      (let ((updated-conn-list (filter (lambda (c) (not (ws-conn-closed? c))) connects)))
+      (let ((updated-conn-list (filter-conns (lambda (c) (not (ws-conn-closed? c))) connects)))
         (set! connects updated-conn-list))))
+
+  ;; my own filter function
+  (define (filter-conns pred lst)
+    (cond
+      [(empty? lst) '()]
+      [(pred (car lst)) (add-conn (car lst) (filter-conns pred (cdr lst)))]
+      [else (filter-conns pred (cdr lst))]))
+
+  ;; some basic abstraction for cons
+  (define (add-conn x y)
+    (cons x y))
 
   ;; closes all connections on the connection list
   (define (close-all connection-list)
@@ -48,12 +58,12 @@
   (define (get-msg-to-bot m)
     (string-trim (substring (get-message m) (string-length bot-name))))
 
-  ;; code from Óscar López stackoverflow
-(define (urlopen url)
-  (let* ((input (get-pure-port (string->url url) #:redirections 5))
-         (response (port->string input)))
-    (close-input-port input)
-    response))
+  ;; code from Óscar López on stackoverflow for sending a http GET request
+  (define (urlopen url)
+    (let* ((input (get-pure-port (string->url url) #:redirections 5))
+           (response (port->string input)))
+      (close-input-port input)
+      response))
 
   ;;creates the http request uri for the bot
   (define (make-http-req m)
@@ -62,7 +72,7 @@
   ;; connection handler
   (define (connection-handler c state)
     (cond
-      [(not(memq c connects )) (begin (set! connects (cons c connects))
+      [(not(memq c connects )) (begin (set! connects (add-conn c connects))
                                       (ws-send-all connects (get-conn-count connects)))])
     (let loop ()
       (sync (handle-evt c
