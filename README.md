@@ -4,6 +4,7 @@
 The goal of Chat Robot is to create a chat robot using machine learning. It is a single page web app where users can talk to the chat robot through a front end interface, and it can learn things about them. The most interesting aspect of Chat Robot is the machine learning. Saurabh and I are personally interested in machine learning, and would like to learn more about it.
 
 ### Analysis
+- basic abstraction was used to abstract cons
 - recursion was necessary. we needed to loop through data, and select or alter it.
 - higher order functions were used such as map, and filter.
 - Object-Orientation: We took class concepts two steps further and implemented objects with superclasses, member variables and member functions. We also used `set!` to modify values of object properties
