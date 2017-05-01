@@ -8,13 +8,14 @@ This code is for the WebSocket server of the chat robot.
 
 A WebSocket provides full-duplex communication over a TCP connection. 
 This allows for clients to send messages to a server at the same time that 
-the server is sending messages to one or many clients.
+the server is sending messages to one or many clients. When the client receives 
+a message, it can then update the view.
 
 The main function of the WebSocket server is to handle and manage client 
 connections. When a client makes a handshake request with the server, a connection
 is added to the connection list, and is put into a recursive loop within the
 connection handler. When the client sends a messages, the connection handler
-handles it by sending it to all clients on the connection list, and continues
+handles it by sending it to all the clients on the connection list, and continues
 the recursive loop.
 
 **Authorship note:** All of the code described here was written by myself.
@@ -50,7 +51,7 @@ The following represents the code I wrote for this project that displays the cor
 ```
 
 This is a filter function that I wrote to display the key concept of recursion. 
-It will be used in the below example to show the management of connections.
+It will be used in the below examples.
 
 ## Higher-Order Functions
 
@@ -69,7 +70,7 @@ It will be used in the below example to show the management of connections.
 ```
 
 I used higher-order function numerous times in my code. In removed closed-conns,
-I am using ormap to check if there are any closed connections. ormap is very
+I am using ormap to check if there are any closed connections. Ormap is very
 similar to map, except that it functions like or. When it first evauates to true,
 it does not evaluate the rest of the items in the list. map is  unnecessary because
 we only need to know if there is a single closed connection, then we can use
@@ -94,9 +95,17 @@ can also be used in place of map.
   ;; some basic abstraction for cons
   (define (add-conn x y)
     (cons x y))
+	
+  [(not(memq c connects )) (begin (set! connects (add-conn c connects))
+                                      (ws-send-all connects (get-conn-count connects)))])
 
 ```
 
 I used some basic abstraction similar to our very first lesson in functional abstraction.
 the add-conn function is using cons to add x to y. In the case of the filter
-function, x represents a connection, and y represents the connection list.
+function, x represents a connection, and y represents the connection list. 
+
+Add-conn is also used within the connection handler when a client connection is first made. I'm
+using not and memq to check if the current connection is not in the connection list, and is added with
+add-conns if it is not. I am also sending the clients the updated connection list count within this
+piece of code.
