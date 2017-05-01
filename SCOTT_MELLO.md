@@ -106,6 +106,7 @@ the add-conn function is using cons to add x to y. In the case of the filter
 function, x represents a connection, and y represents the connection list. 
 
 Add-conn is also used within the connection handler when a client connection is first made. I'm
-using not and memq to check if the current connection is not in the connection list, and is added with
-add-conns if it is not. I am also sending the clients the updated connection list count within this
-piece of code.
+using not and memq to check if the current connection is not in the connection list. If it is not in the list,
+it is added with add-conn. 
+
+I am also sending the clients the updated connection list count within this piece of code.
